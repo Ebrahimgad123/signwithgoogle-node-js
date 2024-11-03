@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> user information</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        p {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .profile-picture {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 1rem;
+            object-fit: cover; /* لضمان أن الصورة تُظهر بشكل صحيح */
+            border: 3px solid #fff; /* إضافة إطار أبيض حول الصورة */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> User Information</h1>
+        <img src=<%= user.profilePicture %> alt="صورة الملف الشخصي" class="profile-picture">
+        <p>الاسم: <%= user.displayName %></p>
+        <p>البريد الإلكتروني: <%= user.email %></p>
+    </div>
+</body>
+</html>
